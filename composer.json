@@ -1,0 +1,39 @@
+{
+  "name": "layershifter/idn-uri",
+  "description": "IDN URI",
+  "keywords": [
+    "IDN",
+    "URL"
+  ],
+  "minimum-stability": "stable",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Alexander Fedyashov",
+      "email": "a@fedyashov.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "require-dev": {
+    "codeclimate/php-test-reporter": "dev-master",
+    "phpmd/phpmd": "@stable",
+    "phpunit/phpunit": "4.8.*",
+    "scrutinizer/ocular": "~1.1",
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "LayerShifter\\IDN\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LayerShifter\\IDN\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
