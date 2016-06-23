@@ -23,6 +23,13 @@ class URITest extends \PHPUnit_Framework_TestCase
     public function utf8DataProvider()
     {
         return [
+            // Malformed data
+
+            [
+                null,
+                null
+            ],
+
             // ASCII data
 
             [
@@ -32,6 +39,18 @@ class URITest extends \PHPUnit_Framework_TestCase
             [
                 'http://usr:pss@example.com:81/mypath/myfile.html?a=b&b[]=2&b[]=3#myfragment',
                 'http://usr:pss@example.com:81/mypath/myfile.html?a=b&b[]=2&b[]=3#myfragment'
+            ],
+            [
+                'http://php.net',
+                'http://php.net'
+            ],
+            [
+                'http://php.net/',
+                'http://php.net/'
+            ],
+            [
+                'http://php.net/?test=1',
+                'http://php.net/?test=1'
             ],
 
             // Cyrillic data
@@ -59,7 +78,8 @@ class URITest extends \PHPUnit_Framework_TestCase
 
             // Chinese data
 
-            ['https://zh-classical.wikipedia.org/wiki/聖奧思定',
+            [
+                'https://zh-classical.wikipedia.org/wiki/聖奧思定',
                 'https://zh-classical.wikipedia.org/wiki/%E8%81%96%E5%A5%A7%E6%80%9D%E5%AE%9A'
             ],
 
