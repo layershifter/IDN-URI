@@ -72,6 +72,10 @@ class URITest extends \PHPUnit_Framework_TestCase
                 'mail@php.net',
                 'mail@php.net'
             ],
+            [
+                'https://alfabank.ru/sendmail/?backurl=/sme/overdraft/feedback/&backname=%C7%E0%E4%E0%F2%FC%20%E2%EE%EF%F0%EE%F1',
+                'https://alfabank.ru/sendmail/?backurl=/sme/overdraft/feedback/&backname=%C7%E0%E4%E0%F2%FC%20%E2%EE%EF%F0%EE%F1'
+            ],
 
             // ASCII symbols
 

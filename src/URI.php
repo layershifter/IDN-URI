@@ -47,11 +47,13 @@ class URI
         }
 
         if (null !== $parseResult['path']) {
-            $parseResult['path'] = urldecode($parseResult['path']);
+            $utfPath = urldecode($parseResult['path']);
+            $parseResult['path'] = mb_check_encoding($utfPath, 'UTF-8') ? $utfPath : $parseResult['path'];
         }
 
         if (null !== $parseResult['query']) {
-            $parseResult['query'] = urldecode($parseResult['query']);
+            $utfQuery = urldecode($parseResult['query']);
+            $parseResult['query'] = mb_check_encoding($utfQuery, 'UTF-8') ? $utfQuery : $parseResult['query'];
         }
 
         return static::build($parseResult);
