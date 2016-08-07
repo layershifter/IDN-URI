@@ -74,8 +74,10 @@ class URLConvertTest extends \PHPUnit_Framework_TestCase
                 'mail@php.net'
             ],
             [
-                'https://alfabank.ru/sendmail/?backurl=/sme/overdraft/feedback/&backname=%C7%E0%E4%E0%F2%FC%20%E2%EE%EF%F0%EE%F1',
-                'https://alfabank.ru/sendmail/?backurl=/sme/overdraft/feedback/&backname=%C7%E0%E4%E0%F2%FC%20%E2%EE%EF%F0%EE%F1'
+                'https://alfabank.ru/sendmail/?backurl=/sme/overdraft/feedback/&backname=%C7%E0%E4%E0%F2%FC%20%E2%EE%' .
+                'EF%F0%EE%F1',
+                'https://alfabank.ru/sendmail/?backurl=/sme/overdraft/feedback/&backname=%C7%E0%E4%E0%F2%FC%20%E2%EE%' .
+                'EF%F0%EE%F1'
             ],
 
             // ASCII symbols.
@@ -124,15 +126,19 @@ class URLConvertTest extends \PHPUnit_Framework_TestCase
 
             [
                 'https://ru.wikipedia.org/wiki/Аврелий_Августин',
-                'https://ru.wikipedia.org/wiki/%D0%90%D0%B2%D1%80%D0%B5%D0%BB%D0%B8%D0%B9_%D0%90%D0%B2%D0%B3%D1%83%D1%81%D1%82%D0%B8%D0%BD'
+                'https://ru.wikipedia.org/wiki/%D0%90%D0%B2%D1%80%D0%B5%D0%BB%D0%B8%D0%B9_%D0%90%D0%B2%D0%B3%D1%83%D1' .
+                '%81%D1%82%D0%B8%D0%BD'
             ],
             [
                 'http://www.codeisart.ru/blog/Работа-со-строками-в-javascript/',
-                'http://www.codeisart.ru/blog/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81%D0%BE-%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2-javascript/'
+                'http://www.codeisart.ru/blog/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81%D0%BE-%D1%81%D1%82%D1%80%D0' .
+                '%BE%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2-javascript/'
             ],
             [
                 'http://sistem.in.ua/sample-page/вытягиваем-из-html-данные-для-анализа/',
-                'http://sistem.in.ua/sample-page/%D0%B2%D1%8B%D1%82%D1%8F%D0%B3%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%B8%D0%B7-html-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B4%D0%BB%D1%8F-%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0/',
+                'http://sistem.in.ua/sample-page/%D0%B2%D1%8B%D1%82%D1%8F%D0%B3%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%B8%' .
+                'D0%B7-html-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B4%D0%BB%D1%8F-%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0' .
+                '%B7%D0%B0/',
             ],
             [
                 'http://здоровьесемьи21.рф/услуги',
@@ -140,7 +146,8 @@ class URLConvertTest extends \PHPUnit_Framework_TestCase
             ],
             [
                 'http://пример.рф/страница?раздел=тестовый#тестовый раздел',
-                'http://xn--e1afmkfd.xn--p1ai/%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0?%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB=%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9#тестовый раздел'
+                'http://xn--e1afmkfd.xn--p1ai/%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0?%D1%80%D0%B0%D0%B7%D0%' .
+                'B4%D0%B5%D0%BB=%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9#тестовый раздел'
             ],
             [
                 'яндекс.рф/search',
@@ -169,7 +176,8 @@ class URLConvertTest extends \PHPUnit_Framework_TestCase
 
             [
                 'https://kn.wikipedia.org/wiki/ಸೇಂಟ್_ಆಗಸ್ಟೀನ್',
-                'https://kn.wikipedia.org/wiki/%E0%B2%B8%E0%B3%87%E0%B2%82%E0%B2%9F%E0%B3%8D_%E0%B2%86%E0%B2%97%E0%B2%B8%E0%B3%8D%E0%B2%9F%E0%B3%80%E0%B2%A8%E0%B3%8D'
+                'https://kn.wikipedia.org/wiki/%E0%B2%B8%E0%B3%87%E0%B2%82%E0%B2%9F%E0%B3%8D_%E0%B2%86%E0%B2%97%E0%B2' .
+                '%B8%E0%B3%8D%E0%B2%9F%E0%B3%80%E0%B2%A8%E0%B3%8D'
             ],
 
             /**
